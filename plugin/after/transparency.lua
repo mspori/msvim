@@ -22,10 +22,10 @@ vim.api.nvim_set_hl(0, "NeoTreeVertSplit", { bg = "none" })
 vim.api.nvim_set_hl(0, "NeoTreeWinSeparator", { bg = "none" })
 vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = "none" })
 
--- transparent background for nvim-tree
-vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NvimTreeVertSplit", { bg = "none" })
-vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "none" })
+-- additional transparent highlights for neo-tree
+vim.api.nvim_set_hl(0, "NeoTreeFloatBorder", { bg = "none" })
+vim.api.nvim_set_hl(0, "NeoTreeFloatTitle", { bg = "none" })
+vim.api.nvim_set_hl(0, "NeoTreeTitleBar", { bg = "none" })
 
 -- transparent notify background
 vim.api.nvim_set_hl(0, "NotifyINFOBody", { bg = "none" })

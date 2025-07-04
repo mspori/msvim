@@ -20,10 +20,19 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       local lspconfig = require("lspconfig")
+      
+      -- Configure diagnostics
+      vim.diagnostic.config({
+        virtual_text = true,
+        signs = true,
+        underline = true,
+        update_in_insert = false,
+        severity_sort = true,
+      })
 
       lspconfig.ruby_lsp.setup({
         capabilities = capabilities,
-        cmd = { "/Users/michaelspori/.local/share/mise/installs/ruby/3.4.1/bin/ruby-lsp" },
+        cmd = { "ruby-lsp" },
         init_options = {
           formatter = "none",
           linters = {},
