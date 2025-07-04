@@ -1,17 +1,18 @@
 return {
-  "folke/snacks.nvim",
-  dependencies = {
-    "echasnovski/mini.icons",
-  },
-  priority = 1000,
-  lazy = false,
-  opts = {
-    bigfile = { enabled = true },
-    dashboard = {
-      enabled = true,
-      preset = {
-        header = [[
-                                                                    
+	"folke/snacks.nvim",
+	dependencies = {
+		"echasnovski/mini.icons",
+	},
+	priority = 1000,
+	lazy = false,
+	opts = {
+		bigfile = { enabled = true },
+		bufdelete = { enabled = true },
+		dashboard = {
+			enabled = true,
+			preset = {
+				header = [[
+
     ███╗   ███╗███████╗██╗   ██╗██╗███╗   ███╗
     ████╗ ████║██╔════╝██║   ██║██║████╗ ████║
     ██╔████╔██║███████╗██║   ██║██║██╔████╔██║
@@ -20,10 +21,16 @@ return {
     ╚═╝     ╚═╝╚══════╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
 
         ]],
-      },
-    },
-  },
-  keys = {
-    { "<leader>gg",       function() Snacks.lazygit() end,            desc = "Lazygit" },
-  }
+			},
+		},
+	},
+	keys = {
+		{
+			"<leader>gg",
+			function()
+				Snacks.lazygit()
+			end,
+			desc = "Lazygit",
+		},
+	},
 }
